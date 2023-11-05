@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/responces.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+    <div class="ctn">
+        <div class="navb">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8NDhAODRANEA4ODQ8PDRAPDw8NDg8QFREWFxUVFRUYHSggGBolHhUVITIhJikwOi8uFx8zODMsNygtLisBCgoKDg0OGxAQGzIlICUwLTIyNTUvLy0xLTUtLy0vLS4vLy0tLS8tLjAtLS0tLS8tLy0tLS8tLS0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAQQFBgMCB//EAEMQAAEDAgMFBgEICAQHAAAAAAEAAgMEEQUSIQYTMUFhIlFxgZGhMhQjM0JScoKxByQ0U2KSwdEWc6LhFUNjk7LS8P/EABoBAQADAQEBAAAAAAAAAAAAAAACAwUEAQb/xAAzEQACAgEBBQUHBAIDAAAAAAAAAQIRAyEEEjFBUQUiYXGRMoGhscHR8BNCUuEU8SMzYv/aAAwDAQACEQMRAD8A/VFFVFzFwREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAVUVQBERAFFVEAREQBERAEREAREQBERAEREARFUBEREAREQBERAFVEQBERAFVFUAREQBRVRAEREAREQBERAEREPQirhYXOg7zoPVUhDyz5RedRUMhaXyuaxg0uRfXuAGpPQLHocWgqHFkL8zmtzEZZG6XA5jqFB5IKSi2rfK9SuWbHGSg5K3wVq2ZiLGrq+KnDTM7KHkhvZe65Fr8B1C+KPFqed2SKTM+xOXJK3QcdS2y8ebGpbjkr6XqePPiU9xyV9L1MxF8fKY8+TOzPe2XO3Nfute9+i9cp7lYteBYpJ8D5REQ9CIiAIiIAiIgCIqgCIiAKKqIAiIgCKuNgXHRrQS4ngABcn0Wmmx3MHGlhfM2MXkeSYmtHgRc+dlXkywh7T+r9Fr+alObaMeJd9/V+i+PQ3S+BI0tLmEPADvgLXEkfVGtr9LrT4jN8pw58hGTMGFwLrgESi+vMLV0GL0tC/K2V0kUpaH2BIY/Lr4m9+HEeCuw4dozyrFjbVcf6r5mfk7UxrNCEVcZJO1yUrSddLWr1o3TcYEtNLNC05o8oyOF/ieACbHhqfMLDxCepdBSybws3m83+VrWH4+xa2vC/Pkrj2HVOfNRNi+e0nJcGWNwQ7XiDa+nMdVl1WFOno4qeWQxyNEZe+PXthtnAXtoblSWxRlCDy5dHo64rXi0tV0r0KZY9uzb8Jd2lSa4Se8mnpwuOjXmYuLUI+Qyh4laGyRSZ5nC99WnwGo9VtKXEYJrNZNE+RzM5Y17XP4C9wOFrrBo9nKeJsocZ5t+wMl30hOZocHC2UAjUDW6zKLCqanOaGGJjrEZgLvsePaNyrf0djxp7jk3ydJLwu23o2/6OrZtly48m/a1STXk5O1Xg6rXrqazaypbEIXSB+UOed4G52sccvEcOuvGx6r6wbHXVFQ6KN8s8GUl0pgELG2bccALG9hY8VvQSOCFxPEkpDJgjBr9Pvdd6vJtVy8z17Be0POsklbTpN1oqqrqnztN+JjYkWCCV8jQ4Rwyv1DXFoDCbi/A6BYGz7Y3UjJoWHO5k2V4aN6TneLD0C3AKqp/wCPd1j3r4+HTh5a2Xz2WE836r47rXq0781WnQ4Zs+HGlLC4CquRrvA6+f8Altbzut82MGtpzK8byOEixNi4OY7jfn2j5graGkiMm9MUW9/ebtm8/mtdYuLYPBWBu/a7M3Rr2OySAd1+BHQhWPDsDmt2DiufB6rWOlK0n118DOh2VLHuuEl3dzSqUtxt95/yfNmI+rlElXK15MUUTBE2we0PNmAgHTjcrzZjU8cbJKiJjonuIzse1jgbni25107gsitwX9V+T0b9yc7HFzy6QusDo5178S0+XBeUuEkVcDWQiSlewtmdmN2yAOsTrex7PuoS2KEtcWWn3nT8Ndbta/tSd8tGVZMXaOOVwad+LWspN8KlcYqk+D5o2ny6LeMiD/nJG52DK/VuQvGvAGwvYrJyrn8KxCB089VNaFomZTMMvzYvl0Av8JytHH7S8ZKeZj3SPqJYnPdeKQDfwuaCbiwPDhwBtfgoZ8O0bO6yQ9NNK8dG/fpfE6n2m8cFLJHi5LpSWibb0W9yur62dIixJKo00IfWOYXAlrsgvmOY2yjS5tqeCyKWdkzBJE7Mw31AI4cbg6hQU4t7vOrrmaUcsZPd51dc/Q+1VEUiwKqKoAiIgCiqICrHrXyticYGtfKAMjXaA66+duqyF8ryStURnHei1dGhwull+Vh9ZITKzWJoc0tddvaADdLWJ0HcV4tpQ2sNIGyiJ7N5cNLmNFiRfWwsQ5tzzA71ua3Do55YJnmQPp35mZHZQ7nZ3eL/AJnvWbdWYceDBFbq3m07vipPS71vRL68DKXZUJrdza1JtPW2muEtdenK6Rp6fCZXU8tLWStkic5u6MTSyRrc4dYk6a24WNrnVbKnp2QxsijFmRgBg42sLXuefXqvRFZl2jJk0b0u6SpXVXS8Pr1NLHhhjSUVwVe7kvcF8TTMjGZ7mtb3uNgtdjWMNpRlFnSuF2t5Afad0/Nc1G51XKDNKGk/WffKOjRwHsszaNrWN7kVcvReppbPsUskf1JOo/F+SOim2ihbowPf1Ayt99fZeP8AiQfuT/3P9lgy0UMRyyNmH/UzNLfQD2upLhLo9Xvjaz6j3HR443AFys/LtG233a040lp52tPPh4lmOWwST14dW19jbQ7QRH42vZ1sCPbX2WygnZIM0bmuHQ3t49y5SehexufRzPtC9hfhcEAheMUjo3ZmOLXDmP696rh2rmxy3c0fo/s/zUsexYcsd7FL6r7naotdhOKifsPs2UDhycO8f2WxW5iywywU4O0ZuSEsct2XEIpLmynJlzW7Oa4bfrZczVbWSUbsuI0ksTSbNmgcJoXeZtbw49FNtLieRi5cDp0XB7QfpLgibloWGeQj45WviiYerTZzj008VxVJU45jk9oaipDQ7tvjkfS0sA67u1z01P5qS1Di1xP2yspY6huSdjJG8QHi9ja1weIPULTM2UhY9pilqI4s4c+EPzRuPidR7nwWwwOgfS00cEs81TIxvbnmJdJI4kk8eWtgLnQDU8VnK/FtWbCt3HJpdOXo7Rz5dnx5VU4pmgrd4/5RUV8bY4YLmnAe1xcCLZjbqW36kDktdnlfSRvp3lkMLnZSw9p73OJPjYE+Hmuvc0EEEAgixBAII7iDxCwqzC2yiBsbtzHTytfu2NAY9oOrbC1uev8AEUnHZtoVZI7r6rgkl09q21158kjK2vspzcsmKbUmnfi21x8FS0XJVwM2Nrg1okN3hoEhsBd4aMxsOt1V9L5XOtEbaVaBVRVAEREAUVUQFUREAREQBYuKVraaF8rtco7I+048Aspc7tLE+qmipmXysYZpTa9gTlHnxt95QyScYuuPIv2fHGeRKbqK1fktWczvHzyFzrukkdy1JJ4AD2stvHSsi0eDLKLZ2NJDGEm1i4auN9LDwXvT0UsDRJFTRloBAc+UPlIsQSDfKDbuHPmvrCsSyh7I4HyyCS4BdlyNAAAc431F3aeJWT/ja9/i/Bv0XNv8V0ye3drubUMNwXWtfcvx+RkMbLJGWfJ2iMXsc4Bbb7JcTp4LFozK4h7WCTdtDWgm2UAXGgN1tK2rMwigDXxvnzbxrtXRxt1d68PVa7EKjKW1VNdoblY9p0tplaLcxYfkvc2KMWu83XknpTdKl7Npu/dVUZOSMmnkbbSq3569OR6uqDVfNm8cgF2M/wCW/S9rcjbgtY4LeVrmTGB7bMdI3NG/ncDRp6XLfRa+tgc6aTI11s7jwsBrzPALP7QwNveT3pXTrnatacnXuaarmbvZuSaThN6VaeitGBmLSHNJBBuCOIK22KVDZ6Zk28dFLE7slucN3ltQcvAHkT3+KwXU7G/SSNH8Mfzp9fhHqvfCjHK99OWubFMyxG8dncWm+pFuV9Ap7A5Y5bja72lePJ6cNetP0O7LTrIr7ut+HNa8dOnQxKbbCSOMiaMSuA7DgRGSf4tPcLRV7cTxc2DJDFfstA3NM3rc6O9yv0OiwWmguWRtJLi4F4D3N6AnUBbBbsMWSu/L88zgy7Tg3m8OOvP7cj8n2Z2Pa/EZqauaHtpYmPe1jnBjnvyFgvoS2xd6L9SpqeOFjY4mMjjYLNYxoY1o6AL5ipI2SSTNaBJMGCR3NwYLNHgLn1Xsr0qOKc952ERF6QCIiAIiIAqoqgCIiAKKogCiIgCIiALi8Xj3+JiEk5XPgY4XIu3K0ke59V2i4Xa+Msq84uM7I3gjQggZdD+Fc21+wn4ml2X/ANzSdPddfAyZooZKhrah7pXue2NlPGcsVO0uIDSR3DLe3MFZkFAKilMtP83PHPUmF0ehs2RwDdOWg0XP7O/tcH+YD6XP9FuNla/Jg8k/OL5U4feuXD3IUMDWS3Jfmn59DP7Q2LDsuWGNa3GTb5umtb+KJh1Y+X5ZUylpe1kcDS34bu0cR+fmvXBZG5ntflDXRO1doAQND6E+q1Gz77YVfm+tIPWzP9lQ5Ze25JY9ohLjuq/W7+B2dk4f1dh7377bNpVVYAZHETkhjytdYBzrcXd4usWaZz9XOc49SSsbOheszJOeWTcnx9PxGviwxxpRiuAcVmYW0xubVSFscERJdI85QdCLN+0deSx5pI6VrH1DXySy/stIy5mnPeQNWs/NazFHAvEuMz5C0fNUFLZ0jG8gfqx+Zue9b/ZXY8sjjly6Lil+6VdF0M7bu0I408ePV8G+SNliO2U08giw9jhro7JvJX2PJuuUf/aLpaDE5WQ58SbDTHkTK0Z/w30PS5X5+zaid36vhVOKdp5QMM9Q7q59j628160+x+JVTt5PZhPF1RKXyEeWY+q+qyYMSiozqC87l9vmfPxnO7Vyfw+/yP0+GVr2h7HNcxwu1zSHNI7wQvpcZg1B/wALPzmKUrWE3kgeG5Ce8XkBa7qB4grcv2tw5vGqh/Dmd+QXBLC7rH3l5P7HTGene0fuN0i09NtTQSvbHHUxue9waxtnguceAFwtwqpQlH2lRJNPgERFE9CKogIqoqgCIiAKKqIAiIgCIiALntsqEyQtmaNYSc33HWufIgepXQr5lDcrs9smU5s1suW2t78lDJBTi4luDM8ORTXI/PdmtayHxd/4OWFg1XbZ6tHNs7G+Uj4h/ddTNVSxsLcNp4KeEaOrKsiFh6hp7b/vHTxC46HBaGFjop8Tme1xBfFSxPETiOFybtdbvso7Ns01Goq/JFHa21f5WVTgqSjKOrS48/8AVrxNvsjA+pwksibmfHWONrjhux3/AHl6T0U0X0kT2gcSWkt9RotZSjBYdGnEz13gZr+Ahbugx7Dovgq8Rj6SulnA8nB4C82jsieV7zjJPy/os7P7Rls2GOJqLS/9Gv3i21HTshgdWVT4442C8ZlvkJ5OIGrujR8Sz21GF1ZB31O59wb52wSP+83S/osLbBlcXMfQ0cM+7F4pnvZNuTbjFC6zQ7+LU8uC59l7K3M3/L7r0+fy18tDQ2jtJZMdYlTfH+q+enhxNA+Ssqd5NSNNJBJ9PiVc8QTTN/hefo2dzWDzWFh1Dh7XWiZWYvUA9oQMfFSNfx7T+PmSQtJiNbVMfvMQgllnvo6vbK6Nn3IuyweBuOix6raKtmaGOqJWxj4Y4iKeIDuyRgBfVRxZK7r08HXxWr9YrklSMakfoMlViETMhdhODQ/YL4nTDy1aT6LSVk2Hu/bcXrqs/WbBG9sZ6DMC1cJbnzPHqUUobNu8HXkkvi7fxD14nZMxPAovgoq2W3OWUMB8mvt7K1m1VBunspsMgjlc0tjlk3cpYT9axbqfPiuMWy2dwl1fVxUzbgPdeRw+pGNXu9OHUhSliiu9Jt11kzzyR3H6NsIEbRiNQPjkbBRg97nZHSe5A8Hd4X6QuTx6qYyswvDKcBuWoZO9jeDIYWOyNPjYn8HVdcsjaZynJTlz+V0vqXQSSpHyiIuYkEVRARVRVAEREAUVUQBERAEREAWjxHGZXudBh8W/labSSn6CI8wXHRzh3X9eC21WwuYWtF82hBeY226uGoHgtY/Z9szQ2qle+ICzaeG9LStHdlYczvxOKnCUY6tX8vf9vUrnvPSP5+eT8jjsRp4S/PieJxGQHWOFr6hzT3dnRnosXPgo4y4g/q1jGj3AX6NS4LSw/RU1O3qI2F38xF1lGliOhjjI6saf6K17XneilXkkjmezz4pr3pv42j8w3OCP4VFbH99jXj/S1P8ADNPN+y4jTSE/CyZroHHprc+y/QqnAKKX46aC54lrN271bYrS1mwNI/WEyQnkL71no7X3SO27TH91lcsOdftjL1j9aOKrtka+EXMDpG/ahImB8h2vZaiOpnpnZWPngeOLWufC4eI0Xdf4WxCk1pJ81uUbjET4tJsfVec+M1sYyV9PHMzh+sQNsfAgZVfHtdpVlh+e+ypzUfbjKPuTXqq+Rz1NttiEYs6VszfszRseD4kWPuvR209JN+14XRPJ4vhvTv8AYE+62bhhNR9LSSwOP1oJSWj8J09l5P2Vw6X6GvkjPdPDm9xlVkds2Gb/AIv0+X2LoZk/Zmn+eJrt5gEvxQYjTk845BK0fzOJ9l8/8MwJ3CvrWdH05d+UazXbA3+jr6N33szPyJXif0fzc6zDwP8AMf8A+qu/V2fllfr90Xpvw+H3MZ2F4G3jiNW7oyleD7sX1SbQ0WF7x2FxVEkz2bs1FY5ga1t79mNnUDjbgsuPYWJpvPiENuYhhfKfI309F1Ozuy1JA4SQQPkeNW1FXldl6sjGl+th4rmybbs3s77m+i+tJfE9U03Sq/DUxf0e4DOJJMTr85qKgERCTSQNdbM9w5E2AA5AdbDuUaLDUknmTzRceXK8kt5/66IvSpBFUVZ6RFUQEVREAREQBRVRAEREAREQBERAEREAREQBU66Hh7KIgMCpwSll1fBHc8S28Z9W2WDJsjSn4TK3wfce4K3qKDxwlxRVLBjlxivQ54bIwfvJP9P9l7xbL07eJe7xcAPYLdIof4+L+KIrZsK/ajFpsMgi+CNoI5ntO9SsxfKqtjFRVJUXKKSpEREXp6EREARFUAREQBERAFFVEAREQBERAEREAREQBERAEREAREQBERAERVARERAFVFUBEVRARVRVAEREAUVUQBERAEREAREQBERAEREAREQBERAEREAVURAFVEQBVREBURRAVERAEREAUVRARFUQERVEBEVRARFUQBRVEBEVRAFFUQBERARVEQBERARVEQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQH/9k=" class="logo">
+        </div>
+        <div class="row">
+            <div class="col">
+                <h1 style="font-size:70px;" id="pp">Welcome to TravelBot</h1>
+                <p style="font-size: 15px;line-height: 15px;color: #fff;">
+                    Experience the vibrant tapestry of India - a land of ancient heritage, diverse cultures, and rich flavors. Marvel at iconic landmarks, immerse yourself in sacred traditions, and savor a medley of aromatic spices. From majestic palaces to bustling bazaars, India invites you on a journey of captivating contrasts and unforgettable moments.
+                </p>
+            </div>
+                <div class="col">
+                    <div class="card card1" onclick="animation(this)" >
+                        <h5>Hotels</h5>
+                    </div>
+                    <div class="card card2" onclick="animation(this)">
+                        <h5>Places</h5>
+                    </div>
+                    <div class="card card3" onclick="animation(this)">
+                        <h5>Restaurants</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">
+            Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+            <img src="https://assets.mytravelresearch.com/wp-content/uploads/2017/09/Travel-Chatbots-optimized.jpg" width="40px" height="40px" style = "border-radius:80px; margin:0;padding:0px;">
+            <span style="font-size:14px;font-weight:bold; position:relative;bottom:20px;">Travel-Chatbot</span>
+            <span style="font-size:14px;font-weight:bold; position:relative;bottom:5px; left:-85px; color:green;">ClickMe</span>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h4 id="chat-timestamp"></h4>
+                            <p id="botStarterMessage" class="botText"><span class="botText">Hi I'm Touriest Chatbot 🖐️</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="question" class="input-box" type="text" name="question"
+                                    placeholder="Enter message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon2" style="color: crimson;" class="fa fa-fw fa-heart"></i>
+                                <i id="chat-icon3" style="color: #333;" class="fa fa-fw fa-send"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+   
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+<script src="static/scripts/jquery.min.js"></script>
+
+
+</html>

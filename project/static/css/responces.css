@@ -1,0 +1,43 @@
+#list
+{
+    background-color:#fff;
+    border-radius:40px;
+    text-align:center;
+    margin-bottom:5px;
+    font-size :10px;
+    border:2px solid #1E90FF;
+    color:#1E90FF;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#list:hover
+{
+    opacity:0.5;
+    border : 2px solid #00BFFF;
+    color:00BFFF;
+}
+
+
+#choice
+{
+            width: 220px;
+            font-size: 12px;
+            text-align: center;
+            /*font-weight: bold;*/
+            position: relative;
+
+}
+
+
+ul li
+{
+      border : 1px solid rgb(128, 128, 128);
+      text-decoration: none;
+      list-style-type: none;
+      border-radius: 25% 10%;
+      /*border-radius: 10% / 50%;*/
+      padding:10px;
+      margin-right:10px;
+}

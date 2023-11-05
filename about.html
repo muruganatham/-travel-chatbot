@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us</title>
+</head>
+<style>
+    /* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth changes */
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Transition for heading color */
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* Add hover effect */
+header:hover {
+    background-color: #0056b3; /* Change background color on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Add a stronger shadow on hover */
+}
+
+header:hover h1 {
+    color: #ffcc00; /* Change heading color on hover */
+}
+
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 24px;
+    color: #007bff;
+}
+
+section p {
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+#image-slideshow {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.slide-container {
+    display: flex;
+    border-radius: 20px;
+    animation: slide 10s linear infinite;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-right: 20px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+    </style>
+<body>
+    <header>
+        <h1>About us</h1>
+
+    </header>
+    <section id="image-slideshow">
+        <div class="slide-container">
+            <img class="slide" src="data:image/jpeg;base64,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" alt="Image 1" style="border-radius: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVp5iMQyJY7NO9iFY--E-60VdSOC5l5CucrQ&usqp=CAU" alt="Image 2" style="border-radius: 10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img class="slide" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSn38xK2srO5QxglYm0_gByzAjF2GPRjaXcd6vYfyjNOW7UtCknDyAkSSZGXPo-hvx_M&usqp=CAU" alt="Image 3" style="border-radius: 10px;">
+        </div>
+    </section>
+    <section id="general-information">
+        <h2>General Information Bot</h2>
+        <p>Our General Information Bot is your virtual encyclopedia. It's here to answer your questions on a wide range of topics, offering quick and reliable information on everything from science and technology to history and trivia. Whether you're seeking a fun fact for your next dinner party or need to clarify a concept for your school project, our General Information Bot has you covered.</p>
+    </section>
+    <section id="healthcare-bot">
+        <h2>Healthcare Bot</h2>
+        <p>Our Healthcare Information Chatbot is your dedicated healthcare knowledge hub, providing you with a wealth of information to help you make informed decisions about your health and well-being. In an era where access to trustworthy medical information is crucial, our chatbot is your trusted companion on your healthcare journey.</p>  </section>
+    <section id="travel-bot">
+        <h2>Travel Bot</h2>
+        <p>Planning your next adventure? Our Travel Bot is your travel guide and advisor. Whether you're looking for destination recommendations, travel itineraries, hotel bookings, or travel tips, our Travel Bot is packed with insights and suggestions to make your journey memorable. Explore the world with confidence, knowing you have a reliable travel companion by your side.</p>
+    </section>
+    <section id="features">
+        <h2>What Sets Us Apart</h2>
+        <ul>
+            <li>Interactive Visuals: We believe in making information engaging. Our chatbots are equipped with interactive visuals, including images and infographics, to enhance your understanding and make your experience more immersive.</li>
+            <li>Customer Satisfaction: Your satisfaction is our priority. We value your feedback and continuously strive to improve our services based on your input. Your positive experience is our success.</li>
+            <li>Reliable Information: We are committed to providing accurate and up-to-date information across all our chatbots. Our team of experts ensures that you receive trustworthy content that you can rely on.</li>
+        </ul>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRu-LA8hPDV2zTzfLMcHU12Fuct7WpI-vZ4g&usqp=CAU" alt="Customer Satisfaction" style="width: -600px; height: 100px; float: right;">
+    </section>
+    <section id="customer-satisfaction">
+        <h2>Customer Satisfaction</h2>
+        <p>Our commitment to your satisfaction is unwavering. We measure our success by your positive experiences. Join our growing community of satisfied users.</p>
+        <!-- Add an image for customer satisfaction -->
+        <img src="https://www.drift.com/wp-content/uploads/2022/03/about-reg@1.5x.png" alt="Customer Community" style="width: -200px; height: 100px;  float: right;">
+    
+    </section>
+    
+    <section id="customer-community">
+        <h2>Customer Community</h2>
+        <p>Connect with our vibrant customer community. Share your thoughts, feedback, and experiences with fellow users.</p>
+        <!-- Add an image for customer community -->
+    </section>
+    <footer>
+        <p>&copy; 2023.All rights reserved.</p>
+    </footer>    
+    </footer>
+    <script src="script.js">
+        window.addEventListener('load', function() {
+    alert('Welcome to ChatBotHub!');
+});
+const slideshow = document.getElementById('image-slideshow');
+
+slideshow.addEventListener('mouseenter', () => {
+    slideshow.style.animationPlayState = 'paused';
+});
+
+slideshow.addEventListener('mouseleave', () => {
+    slideshow.style.animationPlayState = 'running';
+});
+    </script>
+</body>
+</html>
